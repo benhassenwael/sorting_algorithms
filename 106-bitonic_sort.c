@@ -20,7 +20,7 @@ void bitonic_sort(int *array, size_t size)
 				l = i ^ j;
 				if (l > i)
 				{
-					if (((( i & k) == 0) &&
+					if ((((i & k) == 0) &&
 					    (array[i] > array[l])) ||
 					    (((i & k) != 0) &&
 					    (array[i] < array[l])))
