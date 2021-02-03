@@ -28,6 +28,8 @@ void cocktail_sort_list(listint_t **list)
 	int swapped;
 	listint_t *i;
 
+	if (!list || !(*list) || !((*list)->next))
+		return;
 	do {
 		swapped = 0;
 		i = *list;

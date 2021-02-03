@@ -10,11 +10,13 @@ void counting_sort(int *array, size_t size)
 {
 	int i, max, *count, *output;
 
+	if (array == NULL || size < 2)
+		return;
 	max = array[0];
-	for (i = 1; (size_t)i < size; i++) 
+	for (i = 1; (size_t)i < size; i++)
 	{
-    		if (array[i] > max)
-      			max = array[i];
+		if (array[i] > max)
+			max = array[i];
 	}
 
 	count = malloc(sizeof(int) * (max + 1));
